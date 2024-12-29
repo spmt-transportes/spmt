@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
@@ -5,53 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMT - Transporte Pesado</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .logo img {
-            width: 50px;
-            height: 50px;
-        }
-    </style>
-    <script>
-        function getLanguage() {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('lang') || 'pt-PT';
-        }
-
-        function translateContent() {
-            const lang = getLanguage();
-            if (lang === 'en-US') {
-                document.querySelector('.welcome-text').innerText = 'Welcome to SPMT';
-                document.querySelector('.slogan').innerText = 'Moving Cargo, Moving Dreams';
-                document.querySelector('#contact h2').innerText = 'Contact';
-                document.querySelector('#contact p:nth-of-type(1) a').innerText = 'contact@spmt.com';
-                document.querySelector('#contact p:nth-of-type(1) a').setAttribute('href', 'mailto:contact@spmt.com');
-                document.querySelector('#contact p:nth-of-type(2)').innerText = 'Phone: +1 123 456 789';
-                document.title = 'SPMT - Heavy Transport';
-                document.querySelectorAll('.nav-links a')[0].innerText = 'About';
-                document.querySelectorAll('.nav-links a')[0].setAttribute('href', 'about.html?lang=en-US');
-                document.querySelectorAll('.nav-links a')[1].innerText = 'Services';
-                document.querySelectorAll('.nav-links a')[1].setAttribute('href', 'services.html?lang=en-US');
-                document.querySelector('.language-selector a[href="index.html?lang=pt-PT"]').innerText = 'PT';
-                document.querySelector('.language-selector a[href="index.html?lang=en-US"]').innerText = 'EN';
-            } else {
-                document.querySelector('.welcome-text').innerText = 'Bem-vindo à SPMT';
-                document.querySelector('.slogan').innerText = 'Movendo Cargas, Movendo Sonhos';
-                document.querySelector('#contact h2').innerText = 'Contactos';
-                document.querySelector('#contact p:nth-of-type(1) a').innerText = 'contato@spmt.com';
-                document.querySelector('#contact p:nth-of-type(1) a').setAttribute('href', 'mailto:contato@spmt.com');
-                document.querySelector('#contact p:nth-of-type(2)').innerText = 'Telefone: +351 123 456 789';
-                document.title = 'SPMT - Transporte Pesado';
-                document.querySelectorAll('.nav-links a')[0].innerText = 'Sobre';
-                document.querySelectorAll('.nav-links a')[0].setAttribute('href', 'about.html?lang=pt-PT');
-                document.querySelectorAll('.nav-links a')[1].innerText = 'Serviços';
-                document.querySelectorAll('.nav-links a')[1].setAttribute('href', 'services.html?lang=pt-PT');
-                document.querySelector('.language-selector a[href="index.html?lang=pt-PT"]').innerText = 'PT';
-                document.querySelector('.language-selector a[href="index.html?lang=en-US"]').innerText = 'EN';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', translateContent);
-    </script>
 </head>
 <body>
     <!-- Main Wrapper -->

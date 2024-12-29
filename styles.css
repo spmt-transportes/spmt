@@ -1,3 +1,4 @@
+
 /* General Reset */
 * {
     margin: 0;
@@ -34,9 +35,9 @@ header {
     gap: 10px;
 }
 
-.logo-title img {
+.logo img, .logo-title img {
+    width: 50px;
     height: 50px;
-    width: auto;
 }
 
 .site-title {
@@ -110,12 +111,12 @@ header {
 
 .hero-content {
     position: absolute;
-    top: 50%; /* Vertically center the slogan */
-    left: 50%; /* Horizontally center the slogan */
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    z-index: 10; /* Ensure the slogan is above the image */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Make the text readable */
+    z-index: 10;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     text-align: center;
     width: 100%;
     max-width: 800px;
@@ -149,6 +150,13 @@ section p {
     line-height: 1.6;
 }
 
+/* Updated Margin for Content */
+.container {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 900px;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -156,4 +164,22 @@ footer {
     padding: 10px;
     background-color: #003366;
     color: white;
+}
+
+/* New Style for Logotype Section */
+.large-logo {
+    width: 300px;
+    height: 300px;
+}
+
+.logo-section {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.logo-section p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #003366;
 }
