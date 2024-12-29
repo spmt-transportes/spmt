@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMT - Transporte Pesado</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
     <script>
         function getLanguage() {
             const urlParams = new URLSearchParams(window.location.search);
@@ -48,34 +54,49 @@
     </script>
 </head>
 <body>
+    <!-- Main Wrapper -->
     <div class="main-wrapper">
+        <!-- Header Section -->
         <header>
+            <!-- Logo and Title -->
             <div class="logo-title">
-                <img src="images/logo.jpg" alt="SPMT Logo">
+                <img src="images/logo.png" alt="SPMT Logo">
                 <h1 class="site-title">SPMT</h1>
             </div>
+
+            <!-- Navigation Links -->
             <nav class="nav-links">
                 <a href="about.html">Sobre</a>
                 <a href="services.html">Serviços</a>
             </nav>
+
+            <!-- Language Selector -->
             <div class="language-selector">
                 <a href="index.html?lang=pt-PT">PT</a> | <a href="index.html?lang=en-US">EN</a>
             </div>
         </header>
+
+        <!-- Welcome Section -->
         <section class="welcome-section">
             <h1 class="welcome-text">Bem-vindo à SPMT</h1>
         </section>
+
+        <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
                 <p class="slogan">Movendo Cargas, Movendo Sonhos</p>
             </div>
             <img src="images/truck-background.jpg" alt="Caminhão em ação">
         </section>
+
+        <!-- Contact Section -->
         <section id="contact">
             <h2>Contactos</h2>
             <p>Email: <a href="mailto:contato@spmt.com">contato@spmt.com</a></p>
             <p>Telefone: +351 123 456 789</p>
         </section>
+
+        <!-- Footer -->
         <footer>
             <p>&copy; 2024 SPMT Transportes Pesados. Todos os direitos reservados.</p>
         </footer>
