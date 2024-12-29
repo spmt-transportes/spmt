@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPMT - Transporte Pesado</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function getLanguage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('lang') || 'pt-PT';
+        }
+
+        function translateContent() {
+            const lang = getLanguage();
+            if (lang === 'en-US') {
+                document.querySelector('.welcome-text').innerText = 'Welcome to SPMT';
+                document.querySelector('.slogan').innerText = 'Moving Cargo, Moving Dreams';
+                document.querySelector('#contact h2').innerText = 'Contact';
+                document.querySelector('#contact p:nth-of-type(1) a').innerText = 'contact@spmt.com';
+                document.querySelector('#contact p:nth-of-type(1) a').setAttribute('href', 'mailto:contact@spmt.com');
+                document.querySelector('#contact p:nth-of-type(2)').innerText = 'Phone: +1 123 456 789';
+                document.title = 'SPMT - Heavy Transport';
+                document.querySelectorAll('.nav-links a')[0].innerText = 'About';
+                document.querySelectorAll('.nav-links a')[0].setAttribute('href', 'about.html?lang=en-US');
+                document.querySelectorAll('.nav-links a')[1].innerText = 'Services';
+                document.querySelectorAll('.nav-links a')[1].setAttribute('href', 'services.html?lang=en-US');
+                document.querySelector('.language-selector a[href="index.html?lang=pt-PT"]').innerText = 'PT';
+                document.querySelector('.language-selector a[href="index.html?lang=en-US"]').innerText = 'EN';
+            } else {
+                document.querySelector('.welcome-text').innerText = 'Bem-vindo à SPMT';
+                document.querySelector('.slogan').innerText = 'Movendo Cargas, Movendo Sonhos';
+                document.querySelector('#contact h2').innerText = 'Contactos';
+                document.querySelector('#contact p:nth-of-type(1) a').innerText = 'contato@spmt.com';
+                document.querySelector('#contact p:nth-of-type(1) a').setAttribute('href', 'mailto:contato@spmt.com');
+                document.querySelector('#contact p:nth-of-type(2)').innerText = 'Telefone: +351 123 456 789';
+                document.title = 'SPMT - Transporte Pesado';
+                document.querySelectorAll('.nav-links a')[0].innerText = 'Sobre';
+                document.querySelectorAll('.nav-links a')[0].setAttribute('href', 'about.html?lang=pt-PT');
+                document.querySelectorAll('.nav-links a')[1].innerText = 'Serviços';
+                document.querySelectorAll('.nav-links a')[1].setAttribute('href', 'services.html?lang=pt-PT');
+                document.querySelector('.language-selector a[href="index.html?lang=pt-PT"]').innerText = 'PT';
+                document.querySelector('.language-selector a[href="index.html?lang=en-US"]').innerText = 'EN';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', translateContent);
+    </script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header>
+            <div class="logo-title">
+                <img src="images/logo.jpg" alt="SPMT Logo">
+                <h1 class="site-title">SPMT</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="about.html">Sobre</a>
+                <a href="services.html">Serviços</a>
+            </nav>
+            <div class="language-selector">
+                <a href="index.html?lang=pt-PT">PT</a> | <a href="index.html?lang=en-US">EN</a>
+            </div>
+        </header>
+        <section class="welcome-section">
+            <h1 class="welcome-text">Bem-vindo à SPMT</h1>
+        </section>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="slogan">Movendo Cargas, Movendo Sonhos</p>
+            </div>
+            <img src="images/truck-background.jpg" alt="Caminhão em ação">
+        </section>
+        <section id="contact">
+            <h2>Contactos</h2>
+            <p>Email: <a href="mailto:contato@spmt.com">contato@spmt.com</a></p>
+            <p>Telefone: +351 123 456 789</p>
+        </section>
+        <footer>
+            <p>&copy; 2024 SPMT Transportes Pesados. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

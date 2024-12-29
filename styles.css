@@ -1,0 +1,159 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Wrapper with Overall Margin */
+.main-wrapper {
+    margin: 20px;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    color: #003366;
+    background-color: white;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+}
+
+/* Logo and Title */
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-title img {
+    height: 50px;
+    width: auto;
+}
+
+.site-title {
+    font-size: 1.8em;
+    font-family: 'Rubik', sans-serif;
+    color: #ffcc00;
+    margin: 0;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav-links a:hover {
+    color: #66ccff;
+}
+
+/* Language Selector */
+.language-selector {
+    font-family: Arial, sans-serif;
+}
+
+.language-selector a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.language-selector a:hover {
+    color: #66ccff;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.welcome-text {
+    font-size: 2.5em;
+    font-family: 'Rubik', sans-serif;
+    color: #003366;
+}
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: grayscale(1) brightness(0.8) sepia(1) hue-rotate(200deg);
+    max-height: 450px;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%; /* Vertically center the slogan */
+    left: 50%; /* Horizontally center the slogan */
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 10; /* Ensure the slogan is above the image */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Make the text readable */
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.hero-content .slogan {
+    font-size: 2.5em;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: white;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #003366;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+}
