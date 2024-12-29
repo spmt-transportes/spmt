@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
@@ -6,41 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - SPMT</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function getLanguage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('lang') || 'pt-PT';
+        }
+
+        function translateContent() {
+            const lang = getLanguage();
+            if (lang === 'en-US') {
+                document.querySelector('h1').innerText = 'About Us';
+                document.querySelector('p').innerText = 'SPMT is a leading company in heavy transport. With years of experience, we ensure safety, punctuality, and efficiency in all our services.';
+                document.title = 'About - SPMT';
+                document.querySelectorAll('.nav-links a')[0].innerText = 'Home';
+                document.querySelectorAll('.nav-links a')[1].innerText = 'About';
+                document.querySelectorAll('.nav-links a')[2].innerText = 'Services';
+            } else {
+                document.querySelector('h1').innerText = 'Sobre Nós';
+                document.querySelector('p').innerText = 'SPMT é uma empresa líder no transporte pesado. Com anos de experiência, garantimos segurança, pontualidade e eficiência em todos os serviços prestados.';
+                document.title = 'Sobre - SPMT';
+                document.querySelectorAll('.nav-links a')[0].innerText = 'Home';
+                document.querySelectorAll('.nav-links a')[1].innerText = 'Sobre';
+                document.querySelectorAll('.nav-links a')[2].innerText = 'Serviços';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', translateContent);
+    </script>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <!-- Logo -->
         <div class="logo">
             <img src="images/logo.png" alt="SPMT Logo">
         </div>
-
-        <!-- Navigation Links -->
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">Sobre</a>
             <a href="services.html">Serviços</a>
         </nav>
-
-        <!-- Language Selector -->
         <div class="language-selector">
             <a href="about.html?lang=pt-PT">PT</a> | <a href="about.html?lang=en-US">EN</a>
         </div>
     </header>
-
-    <!-- About Content -->
     <div class="container">
         <h1>Sobre Nós</h1>
         <p>SPMT é uma empresa líder no transporte pesado. Com anos de experiência, garantimos segurança, pontualidade e eficiência em todos os serviços prestados.</p>
     </div>
-
-    <!-- Logotype Section -->
     <div class="logo-section">
         <img src="images/logo.png" alt="SPMT Logotipo" class="large-logo">
         <p>Our Logotype / O Nosso Logótipo</p>
     </div>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 SPMT Transportes Pesados. Todos os direitos reservados.</p>
     </footer>
