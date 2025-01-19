@@ -15,18 +15,14 @@
             const lang = getLanguage();
             if (lang === 'en-US') {
                 document.querySelector('h1').innerText = 'About Us';
-                document.querySelector('p').innerText = 'SPMT is a leading company in heavy transport. With years of experience, we ensure safety, punctuality, and efficiency in all our services.';
-                document.title = 'About - SPMT';
-                document.querySelectorAll('.nav-links a')[0].innerText = 'Home';
-                document.querySelectorAll('.nav-links a')[1].innerText = 'About';
-                document.querySelectorAll('.nav-links a')[2].innerText = 'Services';
+                document.querySelectorAll('.section').forEach((section) => {
+                    section.style.display = section.classList.contains('en') ? 'block' : 'none';
+                });
             } else {
                 document.querySelector('h1').innerText = 'Sobre Nós';
-                document.querySelector('p').innerText = 'SPMT é uma empresa líder no transporte pesado. Com anos de experiência, garantimos segurança, pontualidade e eficiência em todos os serviços prestados.';
-                document.title = 'Sobre - SPMT';
-                document.querySelectorAll('.nav-links a')[0].innerText = 'Home';
-                document.querySelectorAll('.nav-links a')[1].innerText = 'Sobre';
-                document.querySelectorAll('.nav-links a')[2].innerText = 'Serviços';
+                document.querySelectorAll('.section').forEach((section) => {
+                    section.style.display = section.classList.contains('pt') ? 'block' : 'none';
+                });
             }
         }
 
@@ -43,21 +39,116 @@
             <a href="index.html">Home</a>
             <a href="about.html">Sobre</a>
             <a href="services.html">Serviços</a>
+            <a href="images.html">Imagens</a>
         </nav>
         <div class="language-selector">
-            <a href="about.html?lang=pt-PT">PT</a> | <a href="about.html?lang=en-US">EN</a>
+            <a href="images.html?lang=pt-PT">PT</a> | <a href="images.html?lang=en-US">EN</a>
         </div>
     </header>
+
     <div class="container">
         <h1>Sobre Nós</h1>
-        <p>SPMT é uma empresa líder no transporte pesado. Com anos de experiência, garantimos segurança, pontualidade e eficiência em todos os serviços prestados.</p>
+
+        <!-- Portuguese Content -->
+        <section class="section pt">
+            <p>A SPMT &eacute; uma empresa especializada em solu&ccedil;&otilde;es de transporte n&atilde;o convencionais, com expertise em manuseamento, ripagem, eleva&ccedil;&atilde;o e transporte de transformadores, m&aacute;quinas industriais e pe&ccedil;as de grandes dimens&otilde;es.</p>
+            <hr style="margin: 40px 0;">
+
+            <h2>A Nossa Miss&atilde;o</h2>
+            <p>Oferecemos solu&ccedil;&otilde;es log&iacute;sticas personalizadas e seguras para o transporte de equipamentos ou cargas que exigem cuidados espec&iacute;ficos, garantindo a integridade dos produtos e a satisfa&ccedil;&atilde;o dos nossos clientes.</p>
+            <hr style="margin: 40px 0;">
+
+            <h2>Os Nossos Objetivos e Compromissos</h2>
+            <ul>
+                <li><strong>Equipa Especializada:</strong> Profissionais experientes preparados para projetos de grande dimens&atilde;o.</li>
+                <li><strong>Frota Sustent&aacute;vel:</strong> Ve&iacute;culos modernos e sustent&aacute;veis que garantem a seguran&ccedil;a das mercadorias.</li>
+                <li><strong>Tecnologia e Seguran&ccedil;a:</strong> Rastreamento em tempo real para tranquilidade dos clientes.</li>
+                <li><strong>Planeamento Personalizado:</strong> Solu&ccedil;&otilde;es otimizadas para necessidades espec&iacute;ficas.</li>
+                <li><strong>Excel&ecirc;ncia:</strong> Qualidade e satisfa&ccedil;&atilde;o garantidas.</li>
+            </ul>
+            <hr style="margin: 40px 0;">
+
+            <h2>Os Nossos Clientes</h2>
+            <p>Colaboramos com empresas de diversos setores, incluindo energia, ind&uacute;stria, metalomec&acirc;nica, constru&ccedil;&atilde;o civil e transporte de m&aacute;quinas ferrovi&aacute;rias.</p>
+            <hr style="margin: 40px 0;">
+
+            <h2>Por Que Escolher a SPMT</h2>
+            <ul>
+                <li><strong>Seguran&ccedil;a e Confiabilidade:</strong> Garantimos que a sua carga est&aacute; em boas m&atilde;os, do in&iacute;cio ao fim do transporte.</li>
+                <li><strong>Agilidade e Pontualidade:</strong> Entregas realizadas dentro dos prazos estabelecidos.</li>
+                <li><strong>Experi&ecirc;ncia em Cargas Especiais:</strong> Conhecimento t&eacute;cnico e experi&ecirc;ncia para lidar com as especificidades da sua carga.</li>
+                <li><strong>Solu&ccedil;&otilde;es Personalizadas:</strong> Atendimento individualizado para responder &agrave;s suas necessidades.</li>
+                <li><strong>Tecnologia e Inova&ccedil;&atilde;o:</strong> Monitoriza&ccedil;&atilde;o constante e informa&ccedil;&otilde;es precisas sobre o transporte da sua carga.</li>
+            </ul>
+            <hr style="margin: 40px 0;">
+
+            <h2>A Nossa Vis&atilde;o</h2>
+            <p>"Ser reconhecida como a empresa l&iacute;der em transportes especiais, refer&ecirc;ncia em seguran&ccedil;a, inova&ccedil;&atilde;o e sustentabilidade, trabalhando em parceria com parceiros que partilham a mesma vis&atilde;o e servindo os clientes com excel&ecirc;ncia."</p>
+            <hr style="margin: 40px 0;">
+
+            <h2>Valores</h2>
+            <ul>
+                <li>&Eacute;tica e Transpar&ecirc;ncia</li>
+                <li>Seguran&ccedil;a e Responsabilidade</li>
+                <li>Inova&ccedil;&atilde;o e Tecnologia</li>
+                <li>Excel&ecirc;ncia e Profissionalismo</li>
+                <li>Sustentabilidade</li>
+                <li>Valoriza&ccedil;&atilde;o das Pessoas</li>
+            </ul>
+        </section>
+
+        <!-- English Content -->
+        <section class="section en" style="display:none;">
+            <p>SPMT is a company specializing in unconventional transport solutions, with expertise in handling, rigging, lifting, and transporting transformers, industrial machinery, and large-scale components.</p>
+            <hr style="margin: 40px 0;">
+
+            <h2>Our Mission</h2>
+            <p>We provide customized and secure logistical solutions for transporting equipment or cargo requiring specific care, ensuring the integrity of goods and client satisfaction.</p>
+            <hr style="margin: 40px 0;">
+
+            <h2>Our Objectives and Commitments</h2>
+            <ul>
+                <li><strong>Specialized Team:</strong> Experienced professionals prepared for large-scale projects.</li>
+                <li><strong>Sustainable Fleet:</strong> Modern, eco-friendly vehicles ensuring cargo safety.</li>
+                <li><strong>Technology and Safety:</strong> Real-time tracking for client peace of mind.</li>
+                <li><strong>Customized Planning:</strong> Optimized solutions tailored to specific needs.</li>
+                <li><strong>Excellence:</strong> Guaranteed quality and satisfaction.</li>
+            </ul>
+            <hr style="margin: 40px 0;">
+
+            <h2>Our Clients</h2>
+            <p>We collaborate with companies from various sectors, including energy, industry, metalworking, civil construction, and railway machinery transport.</p>
+            <hr style="margin: 40px 0;">
+
+            <h2>Why Choose SPMT</h2>
+            <ul>
+                <li><strong>Safety and Reliability:</strong> Your cargo is in safe hands from start to finish.</li>
+                <li><strong>Speed and Timeliness:</strong> Deliveries made within agreed deadlines.</li>
+                <li><strong>Expertise in Specialized Cargo:</strong> Technical knowledge and experience to manage unique cargo requirements.</li>
+                <li><strong>Customized Solutions:</strong> Personalized service tailored to your needs.</li>
+                <li><strong>Technology and Innovation:</strong> Continuous monitoring and accurate information about your cargo transport.</li>
+            </ul>
+            <hr style="margin: 40px 0;">
+
+
+            <h2>Our Vision</h2>
+            <p>"To be recognized as the leader in specialized transport, a benchmark in safety, innovation, and sustainability, working in partnership with stakeholders who share our vision and serving clients with excellence."</p>
+            <hr style="margin: 40px 0;">
+
+            <h2>Values</h2>
+            <ul>
+                <li>Ethics and Transparency</li>
+                <li>Safety and Responsibility</li>
+                <li>Innovation and Technology</li>
+                <li>Excellence and Professionalism</li>
+                <li>Sustainability</li>
+                <li>Valuing People</li>
+            </ul>
+        </section>
     </div>
-    <div class="logo-section">
-        <img src="images/logo.png" alt="SPMT Logotipo" class="large-logo">
-        <p>Our Logotype / O Nosso Logótipo</p>
-    </div>
+
     <footer>
-        <p>&copy; 2024 SPMT Transportes Pesados. Todos os direitos reservados.</p>
+        <p>&copy; 2024 SPMT. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>

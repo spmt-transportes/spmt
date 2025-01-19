@@ -15,18 +15,14 @@
             const lang = getLanguage();
             if (lang === 'en-US') {
                 document.querySelector('h1').innerText = 'Services';
-                document.querySelector('p').innerText = 'We offer heavy cargo transport, customized logistics, and tailored solutions to meet our customers\' needs.';
-                document.title = 'Services - SPMT';
-                document.querySelectorAll('.nav-links a')[0].innerText = 'Home';
-                document.querySelectorAll('.nav-links a')[1].innerText = 'About';
-                document.querySelectorAll('.nav-links a')[2].innerText = 'Services';
+                document.querySelectorAll('.section').forEach((section) => {
+                    section.style.display = section.classList.contains('en') ? 'block' : 'none';
+                });
             } else {
                 document.querySelector('h1').innerText = 'Serviços';
-                document.querySelector('p').innerText = 'Oferecemos transporte de carga pesada, logística personalizada e soluções sob medida para atender às necessidades de nossos clientes.';
-                document.title = 'Serviços - SPMT';
-                document.querySelectorAll('.nav-links a')[0].innerText = 'Home';
-                document.querySelectorAll('.nav-links a')[1].innerText = 'Sobre';
-                document.querySelectorAll('.nav-links a')[2].innerText = 'Serviços';
+                document.querySelectorAll('.section').forEach((section) => {
+                    section.style.display = section.classList.contains('pt') ? 'block' : 'none';
+                });
             }
         }
 
@@ -42,17 +38,55 @@
             <a href="index.html">Home</a>
             <a href="about.html">Sobre</a>
             <a href="services.html">Serviços</a>
+            <a href="images.html">Imagens</a>
         </nav>
         <div class="language-selector">
-            <a href="services.html?lang=pt-PT">PT</a> | <a href="services.html?lang=en-US">EN</a>
+            <a href="images.html?lang=pt-PT">PT</a> | <a href="images.html?lang=en-US">EN</a>
         </div>
     </header>
+
     <div class="container">
         <h1>Serviços</h1>
-        <p>Oferecemos transporte de carga pesada, logística personalizada e soluções sob medida para atender às necessidades de nossos clientes.</p>
+
+        <!-- Portuguese Content -->
+        <section class="section pt">
+            <h2>Os Nossos Serviços</h2>
+            <p>A SPMT orgulha-se de oferecer um portfólio abrangente de serviços especializados no transporte de cargas pesadas e não convencionais. Com uma abordagem centrada no cliente, garantimos soluções personalizadas que combinam rigor técnico, inovação e segurança em todas as etapas do processo.</p>
+            <hr style="margin: 40px 0;">
+
+            <ul>
+                <li><strong>Manuseamento e Ripagem:</strong> Planeamos e executamos operações de movimentação de cargas complexas com precisão e eficiência, utilizando equipamentos especializados e uma equipa altamente qualificada.</li>
+                <li><strong>Elevação de Cargas:</strong> Realizamos elevações seguras e controladas, mesmo em ambientes desafiadores, assegurando a integridade dos equipamentos transportados.</li>
+                <li><strong>Transporte de Transformadores e Máquinas Industriais:</strong> Transportamos transformadores, máquinas industriais e outros equipamentos de grandes dimensões com a máxima segurança e conformidade técnica.</li>
+                <li><strong>Soluções Personalizadas:</strong> Desenvolvemos estratégias logísticas adaptadas às necessidades específicas de cada cliente, otimizando custos, prazos e rotas.</li>
+                <li><strong>Consultoria Técnica:</strong> Oferecemos consultoria especializada para planeamento de rotas, obtenção de licenças e coordenação com autoridades locais, garantindo que cada projeto seja executado sem contratempos.</li>
+            </ul>
+            <hr style="margin: 40px 0;">
+
+            <p>Na SPMT, cada projeto é tratado como uma prioridade. Trabalhamos em estreita colaboração com os nossos clientes para garantir que as soluções propostas superem as suas expectativas, mantendo um compromisso inabalável com a excelência operacional.</p>
+        </section>
+
+        <!-- English Content -->
+        <section class="section en" style="display:none;">
+            <h2>Our Services</h2>
+            <p>SPMT takes pride in offering a comprehensive portfolio of specialized services for the transport of heavy and unconventional cargo. With a client-focused approach, we ensure tailored solutions that combine technical precision, innovation, and safety at every stage of the process.</p>
+            <hr style="margin: 40px 0;">
+
+            <ul>
+                <li><strong>Handling and Rigging:</strong> We plan and execute complex load handling operations with precision and efficiency, utilizing specialized equipment and a highly skilled team.</li>
+                <li><strong>Load Lifting:</strong> We conduct safe and controlled lifting operations, even in challenging environments, ensuring the integrity of the transported equipment.</li>
+                <li><strong>Transport of Transformers and Industrial Machinery:</strong> We transport transformers, industrial machinery, and other large-scale equipment with maximum safety and technical compliance.</li>
+                <li><strong>Customized Solutions:</strong> We develop logistics strategies tailored to the specific needs of each client, optimizing costs, schedules, and routes.</li>
+                <li><strong>Technical Consultancy:</strong> We provide expert consultancy for route planning, license acquisition, and coordination with local authorities, ensuring every project is executed seamlessly.</li>
+            </ul>
+            <hr style="margin: 40px 0;">
+
+            <p>At SPMT, every project is treated as a priority. We work closely with our clients to ensure that the proposed solutions exceed their expectations, maintaining an unwavering commitment to operational excellence.</p>
+        </section>
     </div>
+
     <footer>
-        <p>&copy; 2024 SPMT Transportes Pesados. Todos os direitos reservados.</p>
+        <p>&copy; 2025 SPMT. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
